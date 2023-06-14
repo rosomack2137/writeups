@@ -9,5 +9,5 @@ We can also see that there is another function called <i>win</i> which returns s
 ### Solution
 This code takes 80 bytes from user and tries to put it in 64 byte char table. That leads to overflow and we can use it to redirect code execution to <i>win</i> function. <br>
 So we can just enter payload consisting of 72 bytes of padding and 8 bytes long address of <i>win</i> function<br> which we can check in gdb <br>
-![preview](images/3.png)
+![preview](images/3.png)<br>
 ![preview](images/4.png)
