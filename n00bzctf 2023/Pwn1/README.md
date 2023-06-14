@@ -31,3 +31,11 @@ print(conn.recv())
 print(conn.recv())
 ```
 ### Why does it happen?
+
+As you can see on disassembly of <i>main</i> function it first creates 64 bytes stack and before return it frees up the stack with leave instruction which is shorthand for:
+```
+mov rsp, rbp
+pop rbp
+```
+![preview](images/4.png)
+So if we can input 80 bytes to 64 bytes big stack, we can overflow it and make <i>main</i> function ret to address of <i>win</i> function and hence redirect code to <i>win</i> function.
