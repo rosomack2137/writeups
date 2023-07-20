@@ -3,12 +3,12 @@ In this challenge we are provided with binary `chal` which is random number gene
 
 ![preview](images/1.png)
 
-We can see that this challenge is classical ret2win and we just have to overflow the stack and overwrite an address of returnee with address of `win()` function.
+We can see that this challenge is classical ret2win and we just have to overflow the stack and overwrite an address of returnee with address of `win()` function.<br>
 
 ![preview](images/2.png)<br>
-`main()`:
+`main()`:<br>
 ![preview](images/6.png)<br>
-`random_guess()`:
+`random_guess()`:<br>
 ![preview](images/7.png)
 ## Solution
 After quick investigation in gdb I could tell that cannary value is at 44-48 bytes (red) of our input and that 56-60 (purple) bytes overwrite address of the returnee.
