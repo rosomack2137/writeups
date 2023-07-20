@@ -27,13 +27,11 @@ extra_information: 2656555287447842989559415071583557447281901453427194071451296
 
 ## Solution
 This is very easy to break RSA because we are provided with `extra_value` $x = p+2*q$ as we can see in python script above and therefore:
-$$
-n = pq\\
-x = p+2q\\
-q = \frac{x-p}2\\
-2n = p(x-p)\\
-p^2-xp+2n=0
-$$ 
+$n = pq$<br>
+$x = p+2q$<br>
+$q = \frac{x-p}2$<br>
+$2n = p(x-p)$<br>
+$p^2-xp+2n=0$<br>
 Now we can solve this quadratic equation for $p$
 ```python
 import sympy as sp  
