@@ -5,7 +5,7 @@ We have been provided with a connection to a server. First of all, our objective
 We can also observe that there is another function called <i>win</i> which returns shell. <br>
 ![preview](images/2.png)<br>
 ### Solution
-The code takes 80 bytes of input from the user and attempts to fit it into a 64-byte character table. This leads to an overflow, which we can exploit to redirect the code execution to the `win` function. To achieve this, we simply need to provide a payload consisting of 72 bytes of padding followed by an 8-byte address corresponding to the `win` function. This will overwrite the instruction pointer and redirect the code execution.
+The code takes 80 bytes of input from the user and attempts to fit it into a 64-byte character table. This leads to an overflow, which we can exploit to redirect the code execution to the `win` function. To achieve this, we simply need to provide a payload consisting of 72 bytes of padding followed by an 8-byte address corresponding to the `win` function. This will overwrite the instruction pointer and redirect the code execution.<br>
 ![preview](images/3.png)<br>
 ### Code
 ```
